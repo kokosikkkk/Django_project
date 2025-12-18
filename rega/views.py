@@ -17,9 +17,7 @@ def user_login(request):#когда выз с запр GET, создается �
                     return HttpResponse('Акк не сущ')
             else:
                 return HttpResponse('ты инвалид')
-        else:
+    else:
             form = LoginForm()
-        return render(request, 'account/login.html', {'form': form})
+    return render(request, 'rega/login.html', {'form': form})
     
-def trylogin(request):
-       return render(request, 'rega/page.html')
