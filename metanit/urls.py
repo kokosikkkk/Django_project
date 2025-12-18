@@ -23,5 +23,5 @@ app_name = 'main'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-    
+    path('rega/', include('rega.urls')), 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
