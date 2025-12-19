@@ -120,6 +120,6 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [ BASE_DIR / "main/static"]
 
-
+LOGIN_REDIRECT_URL = '/'
 
 #superuser pass dfccfvfhj2004

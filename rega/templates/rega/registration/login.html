@@ -2,21 +2,15 @@
 
 {% block title %}Log-in{% endblock %}
 {% block content %}
-    <h1>Log-in</h1>
-    {% if form.errors %}
-        <p>
-            Your username and password didn't match.
-            Please try again.
-        </p>
-    {% else %}
-        <p>Введите логин и пароль, чтобы войти:</p>
-    {% endif %}
+    <h1>Вход</h1>
+    <p>Введите логин и пароль, чтобы войти:</p>
+    
     <div class="login-form">
         <form action="{% url 'login' %}" method="post">
             {{ form.as_p }}
             {% csrf_token %}
             <input type="hidden" name="next" value="{{ next }}"/>
-            <p><input type="submit" value="Log-in"></p>
+            <p><input type="submit" value="войти"></p>
         </form>
     </div>
 {% endblock %}
