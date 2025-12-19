@@ -3,5 +3,16 @@
 {% block title %}Account{% endblock %}
 {% block content %}
     <h1>This is your account</h1>
-    <a href="{% url 'index' %}" class="btn btn-about">Ссылка-кнопка</a>
+
+    <p>
+        Hello {{ request.user.first_name }}
+    </p>
+
+
+    <div class="buttons-row">
+        <a href="{% url 'index' %}" class="btn btn-about">Главная</a>
+        <a href="{% url 'logout' %}" class="btn btn-about">Выйти из аккаунта</a>
+    </div>
+    
+
 {% endblock %}

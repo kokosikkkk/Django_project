@@ -1,6 +1,6 @@
 from django.http import HttpResponse
-from django.shortcuts import render
-from django.contrib.auth import authenticate, login
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login, logout
 from .forms import LoginForm
 
 def user_login(request):#когда выз с запр GET, создается логин форма 
@@ -21,3 +21,10 @@ def user_login(request):#когда выз с запр GET, создается �
             form = LoginForm()
     return render(request, 'rega/registration/login.html', {'form': form})
     
+def user_logout(request):
+    logout(request)
+    #return redirect('index')
+    return render(request, 'rega/registration/logout.html')
+
+def acc(request):
+    return render(request, 'rega/account.html')

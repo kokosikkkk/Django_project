@@ -5,19 +5,6 @@
 
 {% block content %}
 
-<div id="header">
-    <span class="logo">Time manage</span>
-    <span class="user">
-        {% if request.user.is_authenticated %}
-            Hello {{ request.user.first_name }},
-        {% else %}
-            <a href="{% url 'login' %}">Log-in</a>
-        {% endif %}
-    </span>
-</div>
-
-
-
     <div class="middle">
         <h1 class="logo">Название</h1>
 
