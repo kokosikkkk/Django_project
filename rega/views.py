@@ -12,12 +12,12 @@ def user_login(request):#когда выз с запр GET, создается �
             if user is not None:
                 if user.is_active:
                     login(request, user) #устан сессию 
-                    return HttpResponse('Успешный вход..?')
+                    return render(request, 'rega/account.html') #заменить на всплывающее уведомление
                 else:
                     return HttpResponse('Акк не сущ')
             else:
                 return HttpResponse('ты инвалид')
     else:
             form = LoginForm()
-    return render(request, 'rega/login.html', {'form': form})
+    return render(request, 'rega/registration/login.html', {'form': form})
     
