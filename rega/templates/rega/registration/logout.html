@@ -1,0 +1,7 @@
+{% extends 'main/lolyal.html' %}
+
+{% block title %}Logged out{% endblock %}
+{% block content %}
+    <h1>Logged out</h1>
+    <p>Вы успешно вышли.<a href="{% url 'login' %}">Снова войти</a>.</p>
+{% endblock %}
